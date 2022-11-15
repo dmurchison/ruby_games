@@ -1,5 +1,4 @@
-
-require_relative "board"
+require_relative 'board'
 
 class ComputerPlayer
 
@@ -10,3 +9,4 @@ class ComputerPlayer
   end
 
 end
+

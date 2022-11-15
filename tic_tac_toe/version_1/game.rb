@@ -1,6 +1,5 @@
-
-require_relative "board.rb"
-require_relative "human_player.rb"
+require_relative 'board.rb'
+require_relative 'human_player.rb'
 
 class Game
 
@@ -11,7 +10,8 @@ class Game
     @current_player = @player_1
   end
     
-  def switch_turn # Switch turns after a player has made a move
+  # Switch turns after a player has made a move
+  def switch_turn
     if @current_player == @player_1
       @current_player = @player_2
     else
@@ -19,7 +19,8 @@ class Game
     end
   end
 
-  def play # Game loop
+  # Game loop
+  def play 
     while @board.empty_positions?
       begin
         @board.print
@@ -40,3 +41,4 @@ class Game
   end
 
 end
+

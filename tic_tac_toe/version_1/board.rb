@@ -1,19 +1,23 @@
 
 class Board
 
-  def initialize # Initialize the grid
+  # Initialize the grid
+  def initialize
     @grid = Array.new(3){ Array.new(3,'_') }
   end
 
-  def valid?(pos) # Check if a pos is valid
+  # Check if a pos is valid
+  def valid?(pos)
     !@grid[pos[0]][pos[1]].nil?
   end
   
-  def empty?(pos) # Check if the pos is empty?
+  # Check if the pos is empty?
+  def empty?(pos)
     @grid[pos[0]][pos[1]] == '_'
   end
 
-  def place_mark(pos, mark) # If the pos is valid and empty, place the user's mark there
+  # If the pos is valid and empty, place the user's mark there
+  def place_mark(pos, mark)
     if self.empty?(pos) && self.valid?(pos)
       @grid[pos[0]][pos[1]] = mark
     else
@@ -21,22 +25,26 @@ class Board
     end
   end
 
-  def print # Print the grid so the user can see that they made the correct move
+  # Print the grid so the user can see that they made the correct move
+  def print
     p @grid[0]
     p @grid[1]
     p @grid[2]
   end
 
-  def win_row(mark) # Check if the user has won with any rows
+  # Check if the user has won with any rows
+  def win_row(mark)
     @grid.any? { |row| row.all? { |el| mark == el } }
   end
 
-  def win_col(mark) # Check if the user has won with any cols
+  # Check if the user has won with any cols
+  def win_col(mark)
     arr = @grid.transpose
     arr.any? { |col| col.all? { |el| mark == el } }
   end
 
-  def win_diagonal(mark) # Check if the user has won with any diagonals
+  # Check if the user has won with any diagonals
+  def win_diagonal(mark)
     left_diag = []
     right_diag = []
     i = 0
@@ -54,7 +62,8 @@ class Board
     end
   end
 
-  def win?(mark) # Check all three possible winning scenerios at once
+  # Check all three possible winning scenerios at once
+  def win?(mark)
     if self.win_row(mark) || self.win_col(mark) || self.win_diagonal(mark)
       return true
     else
@@ -62,8 +71,10 @@ class Board
     end
   end
 
-  def empty_positions? # Check if there are any empty positions left
+  # Check if there are any empty positions left
+  def empty_positions?
     @grid.any? { |row| row.any? { |el| el == '_' } }
   end
 
 end
+

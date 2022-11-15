@@ -1,5 +1,4 @@
-
-require_relative "board.rb"
+require_relative 'board.rb'
 
 class HumanPlayer
 
@@ -9,7 +8,8 @@ class HumanPlayer
       @mark = mark_value
   end
 
-  def get_position # Get the users position and mark
+  # Get the users position and mark
+  def get_position
     begin
       puts "#{@mark}, Please enter a position in the form of 'num1 num2'"
       input = gets.chomp.split(" ").map(&:to_i)
