@@ -1,4 +1,4 @@
-# Some terminal games I built with Ruby
+# Ruby Terminal Games
 
 ## Tic Tac Toe
 ### Directions
