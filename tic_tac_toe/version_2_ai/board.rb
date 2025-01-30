@@ -1,6 +1,5 @@
 
 class Board
-
   # Initialize the grid
   def initialize
     @grid = Array.new(3){ Array.new(3,'_') }
@@ -10,7 +9,7 @@ class Board
   def valid?(pos)
     !@grid[pos[0]][pos[1]].nil?
   end
-  
+
   # Check if the pos is empty?
   def empty?(pos)
     @grid[pos[0]][pos[1]] == '_'
@@ -75,6 +74,4 @@ class Board
   def empty_positions?
     @grid.any? { |row| row.any? { |el| el == '_' } }
   end
-
 end
-

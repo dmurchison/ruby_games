@@ -2,21 +2,16 @@ require_relative 'board.rb'
 require_relative 'human_player.rb'
 
 class Game
-
   def initialize(player_1_mark, player_2_mark)
     @board = Board.new
     @player_1 = HumanPlayer.new(player_1_mark)
     @player_2 = HumanPlayer.new(player_2_mark)
     @current_player = @player_1
   end
-    
+
   # Switch turns after a player has made a move
   def switch_turn
-    if @current_player == @player_1
-      @current_player = @player_2
-    else
-      @current_player = @player_1
-    end
+    @current_player = @current_player == @player_1 ? @player_2 : @player_1
   end
 
   # Game loop
@@ -39,5 +34,4 @@ class Game
     end
     return "This was a tie... Try again!"
   end
-
 end

@@ -1,7 +1,6 @@
 require_relative 'board'
 
 class ComputerPlayer
-
   attr_accessor :board
 
   def initialize
@@ -24,9 +23,6 @@ class ComputerPlayer
   def game_over?
     @board.game_over?
   end
-
-
 end
 
 # Adding a computer player to tic tac toe game in Ruby
-

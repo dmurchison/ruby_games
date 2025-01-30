@@ -1,11 +1,10 @@
 require_relative 'board.rb'
 
 class HumanPlayer
-
   attr_reader :mark
 
   def initialize(mark_value)
-      @mark = mark_value
+    @mark = mark_value
   end
 
   # Get the users position and mark
@@ -23,5 +22,4 @@ class HumanPlayer
       retry
     end
   end
-
 end
