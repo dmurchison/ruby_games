@@ -3,11 +3,11 @@
 ## Tic Tac Toe
 
 **Directions**:
-    - `Run main.rb` or type `ruby main.rb` in the terminal
+    - `Run main.rb` or type `ruby ./tic_tac_toe/version_1/main.rb` in the terminal
     - `Follow the directions in the terminal`
 
 ## Battleship
 
 **Directions**:
-    - `install pry environment`
-    - `run the play function and follow the directions in the terminal`
+    - `Run /battleship/game.rb` or type `ruby ./battleship/game.rb` in the terminal
+    - `Follow the directions in the terminal`

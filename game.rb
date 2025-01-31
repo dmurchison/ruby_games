@@ -9,4 +9,3 @@ until battleship.game_over? do
   battleship.turn
 end
 
-puts "Game over! Thanks for playing."
